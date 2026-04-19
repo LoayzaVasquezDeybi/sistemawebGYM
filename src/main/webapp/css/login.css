@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Fondo con imagen */
+    background: url('../imagenes/login-fondo.png') no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Caja del login */
+.login-container {
+    width: 320px;
+    padding: 30px;
+
+    /* Transparencia moderna */
+    background: rgba(255, 255, 255, 0.15);
+
+    /* Efecto blur (moderno 🔥) */
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+    color: #fff;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Botón */
+.btn-ingresar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #4CAF50;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ingresar:hover {
+    background: #45a049;
+}
+
+/* Error */
+.mensaje-error {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 10px;
+}

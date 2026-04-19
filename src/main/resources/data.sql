@@ -3,4 +3,5 @@ INSERT INTO  estudiante
  VALUES (1, 'Roberto Geronimo','Zarate Mendoza','C28933');
 
 INSERT INTO usuarios (username, pasword, rol) VALUES ('soly_admin', '12345', 'ADMIN');
+INSERT INTO usuarios (username, pasword, rol) VALUES ('u22219681', 'paul123', 'ADMIN');
 INSERT INTO usuarios (username, pasword, rol) VALUES ('operador_1', 'abcde', 'OPERADOR');

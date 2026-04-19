@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* HERO */
+.hero-gestion {
+    height: 250px;
+    background: url('../imagenes/gestion-banner.png') center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* TARJETAS */
+.cards-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card button {
+    padding: 10px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* INFO SECTION */
+.info-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.info-text, .info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
