@@ -6,10 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Ctrl_MainControladorHTML {
+public class MainControllerHTML {
     private final JdbcTemplate jdbcTemplate;
 
-    public Ctrl_MainControladorHTML(JdbcTemplate jdbcTemplate) {
+    public MainControllerHTML(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

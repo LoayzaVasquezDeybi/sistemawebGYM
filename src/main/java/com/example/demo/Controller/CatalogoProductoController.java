@@ -6,20 +6,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class Ctrl_LoginControladorHTML {
+public class CatalogoProductoController {
     private final JdbcTemplate jdbcTemplate;
 
-    public Ctrl_LoginControladorHTML(JdbcTemplate jdbcTemplate) {
+    public CatalogoProductoController(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    @GetMapping("/login")
+    @GetMapping("/catalogo")
     public String listarEstudiantes(Model model) {
 //        List<Map<String, Object>> estudiantes = jdbcTemplate.queryForList(
 //                "SELECT * FROM estudiante"
 //        );s
 //        model.addAttribute("estudiantes", estudiantes);
 //        return "estudiantes";
-        return "login";
+        return "catalogoProducto";
     }
 }

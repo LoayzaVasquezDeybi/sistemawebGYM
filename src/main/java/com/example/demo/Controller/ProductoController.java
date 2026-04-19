@@ -1,0 +1,25 @@
+package com.example.demo.Controller;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class ProductoController {
+    private final JdbcTemplate jdbcTemplate;
+
+    public ProductoController(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @GetMapping("/producto")
+    public String listarEstudiantes(Model model) {
+//        List<Map<String, Object>> estudiantes = jdbcTemplate.queryForList(
+//                "SELECT * FROM estudiante"
+//        );s
+//        model.addAttribute("estudiantes", estudiantes);
+//        return "estudiantes";
+        return "producto";
+    }
+}
