@@ -46,6 +46,36 @@ public class UsuarioControllerHTML {
         return "redirect:/UsuarioLis";
     }
 
+    // --- MÉTODO PARA ELIMINAR ---
+    @GetMapping("/EliminarUsuario")
+    public String eliminarUsuario(@RequestParam("id") Integer id) {
+        jdbcTemplate.update("DELETE FROM usuarios WHERE id = ?", id);
+        return "redirect:/UsuarioLis";
+    }
+
+// --- MÉTODOS PARA ACTUALIZAR ---
+
+    // 1. Abre el formulario con los datos cargados
+    @GetMapping("/EditarUsuario")
+    public String editarUsuario(@RequestParam("id") Integer id, Model model) {
+        Map<String, Object> usuario = jdbcTemplate.queryForMap(
+                "SELECT * FROM usuarios WHERE id = ?", id
+        );
+        model.addAttribute("u", usuario); // Enviamos el usuario encontrado a la vista
+        return "editar-usuario"; // Crearemos este JSP ahora
+    }
+
+    // 2. Procesa el cambio en la BD
+    @PostMapping("/ActualizarUsuario")
+    public String actualizarUsuario(@RequestParam("id") Integer id,
+                                    @RequestParam("username") String username,
+                                    @RequestParam("rol") String rol) {
+        jdbcTemplate.update(
+                "UPDATE usuarios SET username = ?, rol = ? WHERE id = ?",
+                username, rol, id
+        );
+        return "redirect:/UsuarioLis";
+    }
 
 
 }

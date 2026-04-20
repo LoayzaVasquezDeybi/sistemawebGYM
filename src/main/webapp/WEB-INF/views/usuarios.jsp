@@ -3,48 +3,25 @@
 <html>
 <head>
     <title>Lista Usuarios</title>
-    <style>
-        /* Estilos básicos para que coincida con tu captura de Estudiantes */
-        body {
-            font-family: serif; /* La fuente clásica que se ve en tu captura */
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        th, td {
-            border: 1px solid #dddddd; /* Borde gris claro */
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2; /* Fondo gris claro para los títulos */
-            font-weight: bold;
-        }
-        /* Color alterno para las filas para que sea más fácil de leer */
-        tr:nth-child(even) {
-            background-color: #fafafa;
-        }
-        .btn-nuevo {
-            margin-bottom: 10px;
-            padding: 5px 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/Usuario.css">
 </head>
 <body>
 
-<h2>Usuarios Registrados</h2>
+<div class="header-container">
+    <h2>Usuarios Registrados</h2>
 
-<a href="/NuevoUsuario">
-    <button class="btn-nuevo">Registrar Nuevo Usuario</button>
-</a>
+    <div class="toolbar">
+        <a href="/NuevoUsuario"><button class="btn-nuevo">Registrar Nuevo Usuario</button></a>
+
+        <button type="button" onclick="ejecutarAccion('editar')">Editar Seleccionado</button>
+        <button type="button" onclick="ejecutarAccion('eliminar')">Eliminar Seleccionado</button>
+    </div>
+</div>
 
 <table>
     <thead>
     <tr>
-        <th>ID</th>
+        <th style="width: 30px;"></th> <th>ID</th>
         <th>Nombre de Usuario</th>
         <th>Rol / Cargo</th>
     </tr>
@@ -52,6 +29,7 @@
     <tbody>
     <c:forEach var="u" items="${usuarios}">
         <tr>
+            <td><input type="radio" name="usuarioSeleccionado" value="${u.ID}"></td>
             <td>${u.ID}</td>
             <td>${u.USERNAME}</td>
             <td>${u.ROL}</td>
@@ -60,5 +38,8 @@
     </tbody>
 </table>
 
+<br>
+<a href="/login" style="color: #7f8c8d;">Cerrar Sesión</a>
+<script src="${pageContext.request.contextPath}/JS/usuarios.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+body { font-family: serif; margin: 20px; background-color: #f4f6f8; }
+
+
+/* Contenedor para separar título de botones */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.toolbar {
+    display: flex;
+    gap: 30px;
+
+
+}
+
+button {
+    background-color: #d8f0ee48;
+    border: 1.5px solid #c51a1a;
+    color: black;
+    font-weight: bold;
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 15px; border: 1.5px solid #ccc; background-color: #ffffff; }
+th, td { border: 1.5px solid #ccc; text-align: left; padding: 13px; }
+th { background-color: #a1938d4b; font-weight: bold; }
+tr:nth-child(even) { background-color: #ffffff; }
+
+/* Estilo para que la fila seleccionada resalte */
+tr.selected { background-color: #e3f2fd !important; }
+
+button, .btn-link {
+    border-radius: 40px;
+    padding: 1% 15px;
+    cursor: pointer;
+    font-family: serif;
+    color: black;
+}
+
+button, .btn-nuevo {
+    padding: 15px 15px;
+    cursor: pointer;
+    font-family: serif;
+    border-radius: 10px; /* <-- Esto redondea las esquinas */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Cambia 'collapse' por 'separate' */
+    border-spacing: 0;
+    border: 1px solid #978c8c;
+    border-radius: 20px; /* Redondea la tabla */
+    overflow: hidden; /* Corta las esquinas del contenido para que sigan la curva */
+    margin-top: 20px;
+}
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
