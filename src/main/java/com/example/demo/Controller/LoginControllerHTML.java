@@ -39,7 +39,7 @@ public class LoginControllerHTML {
             model.addAttribute("error", "Usuario o contraseña incorrectos.");
             return "login";
         } else {
-            return "redirect:/UsuarioLis";
+            return "redirect:/main";
         }
     }
 }
