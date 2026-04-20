@@ -11,3 +11,18 @@ CREATE TABLE IF NOT EXISTS usuarios (
     pasword VARCHAR(50) NOT NULL,
     rol VARCHAR(20) NOT NULL
     );
+
+CREATE TABLE IF NOT EXISTS catalogo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(255)
+    );
+
+CREATE TABLE IF NOT EXISTS producto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT DEFAULT 0,
+    catalogo_id INT,
+    FOREIGN KEY (catalogo_id) REFERENCES catalogo(id)
+    );
